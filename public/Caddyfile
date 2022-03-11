@@ -1,0 +1,9 @@
+:9016 {
+	file_server
+	encode gzip
+	header {
+		Cache-Control "no-cache"
+	}
+	root ./
+	try_files {path} /index.html
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        ExtensionBundleId="com.dubai.materialYouColor"
+        ExtensionBundleVersion="1.0"
+        Version="7.0">
+    <!-- MAJOR-VERSION-UPDATE-MARKER -->
+    <ExtensionList>
+        <!-- 设置扩展 ID-->
+        <Extension
+                Id="com.dubai.materialYouColor"
+                Version="1.0.0" />
+    </ExtensionList>
+
+    <ExecutionEnvironment>
+        <!-- 设置扩展能在 18.0 版本(CC2017)之后 PhotoShop 中运行-->
+        <HostList>
+            <Host
+                    Name="PHXS"
+                    Version="18.0" />
+            <Host
+                    Name="PHSP"
+                    Version="18.0" />
+        </HostList>
+
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+
+        <RequiredRuntimeList>
+            <RequiredRuntime
+                    Name="CSXS"
+                    Version="7.0" />
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+
+    <DispatchInfoList>
+        <Extension Id="com.dubai.materialYouColor">
+            <DispatchInfo>
+                <Resources>
+                    <!-- 指定起始载入的网页-->
+                    <MainPath>./index.html</MainPath>
+                    <!--指定用到的 JSX 文件-->
+                    <ScriptPath>./static/jsx/index.jsxbin</ScriptPath>
+
+                    <CEFCommandLine>
+                        <Parameter>--disable-features=SameSiteByDefaultCookies,CookiesWithoutSameSiteMustBeSecure,NetworkService</Parameter>
+                        <Parameter>--disable-site-isolation-trials</Parameter>
+                        <Parameter>--disable-web-security</Parameter>
+                        <Parameter>–-allow-file-access-from-files</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+
+                <Lifecycle>
+                    <!-- 设置扩展面板为可视-->
+                    <AutoVisible>true</AutoVisible>
+                    <StartOn>
+                        <Event>applicationActivate</Event>
+                    </StartOn>
+                </Lifecycle>
+
+                <UI>
+                    <!-- 设置扩展显示为面板模式-->
+                    <Type>Panel</Type>
+                    <!-- 设置扩展标题-->
+                    <Menu>Material You 取色助手</Menu>
+                    <Geometry>
+                        <Size>
+                            <!-- 设置扩展面板尺寸-->
+                            <Height>500</Height>
+                            <Width>320</Width>
+                        </Size>
+                        <MaxSize>
+                            <Height>950</Height>
+                            <Width>400</Width>
+                        </MaxSize>
+                        <MinSize>
+                            <Height>300</Height>
+                            <Width>320</Width>
+                        </MinSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./static/img/icon.png</Icon>
+                        <Icon Type="DarkNormal">./static/img/icon_dark.png</Icon>
+                    </Icons>
+                </UI>
+
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+    <!-- 作者信息-->
+    <Author>huali</Author>
+    <!-- 扩展描述-->
+    <Abstract>materialYouColors, huali.cafe</Abstract>
+    <Contact mailto="zcf0508@live.com"></Contact>
+</ExtensionManifest>

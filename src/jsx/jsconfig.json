@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./build", //prevent "cannot write file" error for CSInterface.js, due to allowJs
+    "lib": ["es5"],
+    "strict": true,
+    "target": "es3"
+  }
+}
