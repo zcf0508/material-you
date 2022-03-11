@@ -5,5 +5,9 @@
 
 # 安装
 
-从 release 中下载压缩包，解压后放到 PhotoShop 安装目录的 %AppData%\Adobe\CEP\extensions 文件夹中。
+## 初次安装
+从 release 中下载压缩包并解压。打开 Photoshop ，运行 文件-脚本-浏览 ，选择安装包中的 安装脚本.jsx 文件。提示安装成功后重启 Photoshop 即可。
 
+## 更新
+
+从 release 中下载压缩包并解压，将 %AppData%\Adobe\CEP\extensions 中的 com.dubai.materialYouColor 删除后再将安装包中的 com.dubai.materialYouColor 文件夹复制 %AppData%\Adobe\CEP\extensions 中。
